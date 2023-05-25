@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+    do mais escuro para o mais claro
+    #0C3DF6
+    #0B69D4
+    #01ABEB
+    #0BD3D4
+    #0CF6B5
+*/
+
+/*pseudo-classe global*/
+:root{
+    /*variaveis globais css*/
+    --cor1: #0CF6B5;
+    --cor2: #0BD3D4;
+    --cor3: #01ABEB;
+    --cor4: #0B69D4;
+    --cor5: #0C3DF6;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor2);
+    font-family: var(--fonte-padrao);
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    color: white;
+    min-height: 140px;
+    text-align: center;
+    font-size: large;
+    padding-top: 40px;
+}
+
+header > h1{
+    font-family: var(--fonte-destaque);
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.527);
+}
+
+header > p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.527);
+}
+.ident{
+    text-indent: 20px;
+}
+
+nav{
+    background-color: var(--cor5);
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.685);
+    padding: 10px;
+}
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    border-radius: 2px;
+}
+nav a:hover{/*quando o cursor estiver por cima da tag nav, os comando 
+    serao executados*/
+    background-color: var(--cor3);
+    color: var(--cor5);
+    transition-duration: 0.3s;
+}
+
+main{
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-width: 420px;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 15px;
+    padding-bottom: 50%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+main h1, h2, h3{
+    color: var(--cor5);
+    font-family: var(--fonte-destaque);
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+}
+
+
+main p{
+    margin: 15px 0px;/*espaçamentos apenas top e bottom*/
+    text-align: justify;
+    line-height: 1.4em;
+    font-size: 1.1em;
+}
+
+
+img{
+    display: block;
+    margin: auto;
+    padding: 40px;
+}
+
+
+footer{
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    color: white;
+    margin-top: 30px;
+    padding: 20px;
+}
